@@ -63,6 +63,8 @@ body{
     padding: 0px;
     background: var(--primary-bg-dark);
     color: var(--text-light);
+    height: 100vh;
+    width: 100vw;
 }
 
 .container{
