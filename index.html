@@ -1,55 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranav's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="icons8-portfolio-96">
-<link rel="stylesheet" href="style.css">
-<!-- Google Fonts alternatives for quick use -->
-<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranav's Portfolio</title>
+  <link rel="icon" type="image/png" href="icons8-portfolio-96.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="dynamic.js"></script>
+  <script src="https://kit.fontawesome.com/e152c97d34.js" crossorigin="anonymous"></script>
 
-    <script src="dynamic.js"></script>
-    <script src="https://kit.fontawesome.com/e152c97d34.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">
-             <img src="python.png" alt="python" class="invert python tran">
-             <img src="java.png" alt="java" class="zigzag java tran">
-             <img src="js.png" alt="js" class="invert js tran">
-            <img src="html.png" alt="html" class="zigzag html tran">
-            <img src="css.png" alt="css" class="invert css tran">
-            <img src="sql.png" alt="sql" class="zigzag sql tran">
-            <img src="C.png" alt="django" class="invert django tran">
-            <img src="mongodb.png" alt="mongodb" class="zigzag mongodb tran">
-            <img src="C++.png" alt="bootstrap" class="invert bootstrap tran">
-        </div>
+  <!-- Icon Section -->
+  <div class="container">
+    <div class="icon">
+      <img src="python.png" alt="python" class="invert python tran" />
+      <img src="java.png" alt="java" class="zigzag java tran" />
+      <img src="js.png" alt="js" class="invert js tran" />
+      <img src="html.png" alt="html" class="zigzag html tran" />
+      <img src="css.png" alt="css" class="invert css tran" />
+      <img src="sql.png" alt="sql" class="zigzag sql tran" />
+      <img src="C.png" alt="django" class="invert django tran" />
+      <img src="mongodb.png" alt="mongodb" class="zigzag mongodb tran" />
+      <img src="C++.png" alt="bootstrap" class="invert bootstrap tran" />
     </div>
-    <div class="cont">
+  </div>
+
+  <!-- Intro Section -->
+  <div class="cont">
     <div class="intro">
-        <p>Hi, my name is</p>
+      <p>Hi, my name is</p>
     </div>
     <div class="name">
-        <p>Pranav Naik.</p>
+      <p>Pranav Naik</p>
     </div>
     <div class="sub">
-        <p>I'm a Web developer  <span id="cursor">_</span></p>
+      <p>I'm a Web developer <span id="cursor">_</span></p>
     </div>
     <div class="info">
-        <p> I am a good web developer with knowledge of JavaScript,<br> HTML5 and CSS3.In addition to my deep knowledge of SQL and MongoDB.</p>
+      <p>
+        I am a good web developer with knowledge of JavaScript,<br />
+        HTML5 and CSS3. In addition to my deep knowledge of SQL and MongoDB.
+      </p>
     </div>
+  </div>
+
+  <!-- Projects Section -->
+   <section>
+  <div class="projects-container">
+    <h1 class="projects-heading">My Projects</h1>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200?text=E-Commerce+Website" alt="E-Commerce Website" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">E-Commerce Website</h3>
+          <p class="project-description">A full-stack e-commerce site with user authentication and payment integration.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link github-link"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="project-link demo-link"><i class="fa-solid fa-link"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200?text=Weather+App" alt="Weather App" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-description">Real-time weather application that fetches data from external APIs.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">API</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link github-link"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="project-link demo-link"><i class="fa-solid fa-link"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="https://via.placeholder.com/300x200?text=Task+Manager" alt="Task Manager" class="project-image" />
+        <div class="project-content">
+          <h3 class="project-title">Task Manager</h3>
+          <p class="project-description">A task management application with user authentication and database integration.</p>
+          <div class="project-tech">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link github-link"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" class="project-link demo-link"><i class="fa-solid fa-link"></i> Live Demo</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="contact">
-        <p>Visit me :</p>
-        <a href="https://www.linkedin.com/in/pranav-naik-0b4a0831b" target="_blank"><i class="fa-brands fa-linkedin fa-2x" aria-hidden="true" style="color: #72F6DC;"></i></a>
-        <a href="https://github.com/npranav2007" target="_blank"><i class="fa-brands fa-github  fa-2x" aria-hidden="true" style="color: #72F6DC;" ></i></a>
-        <!-- <a href="https://www.facebook.com/share/1YGcbMejHo/" target="_blank"><i class="fa-brands fa-facebook fa-2x"aria-hidden="true" style="color: #72F6DC;"></i></a> -->
-        <a href= "https://wa.me/+919529902864" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"aria-hidden="true" style="color: #72F6DC;"></i></a>
-        <a href="https://www.instagram.com/pranavnaik_07?igsh=cWwxOXlhNjF0c2Rp" target="_blank"><i class="fa-brands fa-instagram fa-2x"aria-hidden="true" style="color: #72F6DC;"></i></a>
-        <a href="DiplomaInternshipResume.pdf" target="_blank"><i class="fa-regular fa-file fa-2x" aria-hidden="true" style="color: #72F6DC;;"></i></a>
-    </div>
+  </div>
+</section>
+  <!-- Contact Section -->
+  <div class="contact">
+    <p>Visit me :</p>
+    <a href="https://www.linkedin.com/in/pranav-naik-0b4a0831b" target="_blank"><i class="fa-brands fa-linkedin fa-2x" style="color: #72F6DC;"></i></a>
+    <a href="https://github.com/npranav2007" target="_blank"><i class="fa-brands fa-github fa-2x" style="color: #72F6DC;"></i></a>
+    <a href="https://wa.me/+919529902864" target="_blank"><i class="fa-brands fa-whatsapp fa-2x" style="color: #72F6DC;"></i></a>
+    <a href="https://www.instagram.com/pranavnaik_07?igsh=cWwxOXlhNjF0c2Rp" target="_blank"><i class="fa-brands fa-instagram fa-2x" style="color: #72F6DC;"></i></a>
+    <a href="DiplomaInternshipResume.pdf" target="_blank"><i class="fa-regular fa-file fa-2x" style="color: #72F6DC;"></i></a>
+  </div>
 </body>
 </html>

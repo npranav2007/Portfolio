@@ -212,7 +212,7 @@ body{
     top: 65px;
     height: 30px;
     width: 400px;
-    left: 1100px;
+    left: 82px;
     display: flex;
     justify-content: space-around;
 }
@@ -316,3 +316,100 @@ body{
 .light-mode .contact p {
     color: var(--gray-base);
 }
+.projects-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .projects-heading {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  .project-card {
+    background-color: var(--secondary-bg-dark);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  .project-title {
+    color: var(--highlight-teal);
+    margin-top: 0;
+  }
+
+  .project-description {
+    color: var(--text-muted);
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+  }
+
+  .tech-tag {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--highlight-teal);
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-link {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  .github-link {
+    color: var(--text-light);
+    border: 1px solid var(--text-light);
+  }
+
+  .demo-link {
+    background-color: var(--highlight-teal);
+    color: var(--primary-bg-dark);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin: 20px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .back-link:hover {
+    color: var(--highlight-teal);
+  }
