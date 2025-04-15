@@ -1,16 +1,4 @@
-@font-face {
-    font-family: 'Noto-Sans-Mono-Regular';
-    src:url('webfonts_Noto-Sans-Mono-Regular/Noto-Sans-Mono-Regular.ttf.woff') format('woff'),
-        url('webfonts_Noto-Sans-Mono-Regular/Noto-Sans-Mono-Regular.ttf.svg#Noto-Sans-Mono-Regular') format('svg'),
-        url('webfonts_Noto-Sans-Mono-Regular/Noto-Sans-Mono-Regular.ttf.eot'),
-        url('webfonts_Noto-Sans-Mono-Regular/Noto-Sans-Mono-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
-        font-weight: normal;
-        font-style: normal;
-}
-@font-face{
-    font-family: 'Sailec-Font';
-    src: url('Sailec-Font/Sailec Bold/Sailec Bold.ttf');
-}
+/* Simplified font declarations */
 @font-face {
     font-family: 'Noto-Sans-Mono-Regular';
     src: url('path-to-font/Noto-Sans-Mono-Regular.woff') format('woff');
@@ -20,7 +8,6 @@
     font-family: 'Sailec-Font';
     src: url('path-to-font/Sailec-Bold.ttf') format('truetype');
 }
-
 
 /* Color Theme Variables */
 :root {
@@ -49,150 +36,156 @@
     --text-light: #CBD6F6;
     --text-muted: #8891B0;
 }
-/* Using the alternatives in your CSS */
+
+/* Base styles */
 body {
-    font-family: 'Montserrat', sans-serif; /* replaces Sailec */
-}
-
-code, pre, .intro {
-    font-family: 'Fira Mono', monospace; /* replaces Noto Sans Mono */
-}
-
-body{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background: var(--primary-bg-dark);
     color: var(--text-light);
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-.container{
+/* Icon section - reduced height and adjusted positioning */
+.container {
     position: relative;
-    top: 5px;
+    top: 0;
     width: 100%;
-    height: 120px;
+    height: 80px; /* Reduced from 120px */
     opacity: 100%;
 }
 
-.icon{
+.icon {
     position: absolute;
-    top: 50px;
+    top: 30px; /* Reduced from 50px */
     display: flex;
     justify-content: space-evenly;
     height: 3em;
     width: 100%;
 }
 
-.tran{
+.tran {
     transition: all .8s;
 }
 
-.invert{
+.invert {
     position: relative;
     top: -10px;
 }
 
-/* Icon hover effects */
-.html:hover{
+.zigzag {
+    position: relative;
+    top: 30px;
+}
+
+/* Icon hover effects - maintaining original effects */
+.html:hover {
     position: relative;
     top: 53px;
     color: var(--blue);
 }
 
-.css:hover{
+.css:hover {
     position: relative;
     top: -30px;
     color: var(--blue);
 }
 
-.js:hover{
+.js:hover {
     position: relative;
     top: -30px;
     color: var(--yellow);
 }
 
-.python:hover{
+.python:hover {
     position: relative;
     top: -30px;
     color: var(--green-primary);
 }
 
-.sql:hover{
+.sql:hover {
     position: relative;
     top: 53px;
     color: var(--blue);
 }
 
-.mongodb:hover{
+.mongodb:hover {
     position: relative;
     top: 53px;
     color: var(--green-primary);
 }
 
-.django:hover{
+.django:hover {
     position: relative;
     top: -30px;
     filter: brightness(200%);
     color: var(--green-primary);
 }
 
-.bootstrap:hover{
+.bootstrap:hover {
     position: relative;
     top: -30px;
     color: var(--purple);
 }
 
-.java:hover{
+.java:hover {
     position: relative;
     top: 53px;
     filter: brightness(120%);
     color: var(--red);
 }
 
-.zigzag{
-    position: relative;
-    top: 30px;
-}
-
-.django{
+.django {
     filter: brightness(200%);
 }
 
-.java{
+.java {
     filter: brightness(120%);
 }
 
-.intro{
+/* Intro section - reduced top margin to bring content closer to icons */
+.cont {
+    width: 100%;
+    display: block;
+    margin-top: 50px; /* Reduced from 150px */
+    margin-bottom: 50px;
+}
+
+.intro {
     color: var(--highlight-teal);
-    font-family: 'Noto-Sans-Mono-Regular';
+    font-family: 'Noto-Sans-Mono-Regular', monospace;
     font-size: 25px;
     position: relative;
     left: 100px;
-    top: 100px;
+    top: 50px; /* Reduced from 100px */
+    margin: 0;
 }
 
-.name{
+.name {
     color: var(--text-light);
-    font-family: 'sailec-font';
+    font-family: 'sailec-font', 'Montserrat', sans-serif;
     position: relative;
     left: 100px;
     top: 60px;
     font-size: 50px;
     transition: all 1s ease;
+    margin: 0;
 }
 
-.sub{
+.sub {
     color: var(--text-muted);
-    font-family: 'sailec-font';
+    font-family: 'sailec-font', 'Montserrat', sans-serif;
     position: relative;
     left: 100px;
     top: 10px;
     font-size: 40px;
+    margin: 0;
 }
 
-.info{
+.info {
     color: var(--highlight-teal);
     opacity: 60%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -200,216 +193,257 @@ body{
     position: relative;
     left: 100px;
     top: -15px;
+    max-width: 600px;
+    margin: 0;
 }
 
-.cont{
-    width: 100;
-    display: inline-block;
-}
-
-.contact{
-    position: relative;
-    top: 65px;
-    height: 30px;
-    width: 400px;
-    left: 82px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.contact p{
-    color: var(--text-muted);
-    position: relative;
-    top: -10px;
-    font-family: 'sailec-font';
-}
-
-.contact i{
-    opacity: 70%;
-}
-
-/* Social media icon hover effects with accent colors */
-.fa-linkedin:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--blue);
-}
-
-.fa-github:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--text-light);
-}
-
-.fa-facebook:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--blue);
-}
-
-.fa-whatsapp:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--green-primary);
-}
-
-.fa-instagram:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--purple);
-}
-
-.fa-file:hover{
-    font-size: 2.5em;
-    transition: 0.2s ease-out;
-    color: var(--yellow);
-}
-
-.name:hover{
-    font-size: 5em;
+.name:hover {
+    font-size: 60px;
     transition: 1s ease-out;
     color: var(--green-primary);
 }
 
-/* Responsive design adjustments */
-@media (max-width: 1200px) {
-    .contact {
-        left: 100px;
-        top: 100px;
-    }
-}
-
-/* Dark/Light mode toggle styles */
-.theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: var(--gray-dark-2);
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1000;
-    color: var(--text-light);
-}
-
-/* Light mode class to be toggled with JavaScript */
-.light-mode {
-    background-color: var(--primary-bg-light);
-}
-
-.light-mode .name {
-    color: var(--gray-dark-4);
-}
-
-.light-mode .sub {
-    color: var(--gray-base);
-}
-
-.light-mode .info {
-    color: var(--green-primary);
-}
-
-.light-mode .intro {
-    color: var(--green-primary);
-}
-
-.light-mode .contact p {
-    color: var(--gray-base);
-}
+/* Projects section - enhanced styling while maintaining design */
 .projects-container {
+    width: 90%;
     max-width: 1200px;
-    margin: 60px auto;
+    margin: 100px auto 60px;
     padding: 0 20px;
-  }
+}
 
-  .projects-heading {
+.projects-heading {
     color: var(--text-light);
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
-  }
+    font-family: 'sailec-font', 'Montserrat', sans-serif;
+}
 
-  .projects-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
-  }
+}
 
-  .project-card {
+.project-card {
     background-color: var(--secondary-bg-dark);
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s;
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .project-card:hover {
+.project-card:hover {
     transform: translateY(-5px);
-  }
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
-  .project-image {
+.project-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
+}
 
-  .project-content {
+.project-content {
     padding: 15px;
-  }
+}
 
-  .project-title {
+.project-title {
     color: var(--highlight-teal);
     margin-top: 0;
-  }
+    font-family: 'sailec-font', 'Montserrat', sans-serif;
+}
 
-  .project-description {
+.project-description {
     color: var(--text-muted);
-  }
+}
 
-  .project-tech {
+.project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin: 15px 0;
-  }
+}
 
-  .tech-tag {
+.tech-tag {
     background-color: rgba(0, 0, 0, 0.3);
     color: var(--highlight-teal);
     padding: 5px 10px;
     border-radius: 30px;
     font-size: 0.8rem;
-  }
+}
 
-  .project-links {
+.project-links {
     display: flex;
     justify-content: space-between;
-  }
+}
 
-  .project-link {
+.project-link {
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 4px;
     transition: all 0.3s;
-  }
+}
 
-  .github-link {
+.github-link {
     color: var(--text-light);
     border: 1px solid var(--text-light);
-  }
+}
 
-  .demo-link {
+.github-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.demo-link {
     background-color: var(--highlight-teal);
     color: var(--primary-bg-dark);
-  }
+}
 
-  .back-link {
-    display: inline-block;
-    margin: 20px;
+.demo-link:hover {
+    background-color: rgba(114, 246, 220, 0.8);
+}
+
+/* Contact Section - preserve original styling with enhanced hover effects */
+.contact {
+    position: relative;
+    top: 65px;
+    height: 30px;
+    width: 400px;
+    left: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.contact p {
+    color: var(--text-muted);
+    position: relative;
+    top: -10px;
+    font-family: 'sailec-font', 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.contact i {
+    opacity: 70%;
+    transition: all 0.2s ease;
+}
+
+/* Social media icon hover effects */
+.fa-linkedin:hover {
+    font-size: 2.5em;
+    transition: 0.2s ease-out;
+    color: var(--blue);
+}
+
+.fa-github:hover {
+    font-size: 2.5em;
+    transition: 0.2s ease-out;
     color: var(--text-light);
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
+}
 
-  .back-link:hover {
-    color: var(--highlight-teal);
-  }
+.fa-whatsapp:hover {
+    font-size: 2.5em;
+    transition: 0.2s ease-out;
+    color: var(--green-primary);
+}
+
+.fa-instagram:hover {
+    font-size: 2.5em;
+    transition: 0.2s ease-out;
+    color: var(--purple);
+}
+
+.fa-file:hover {
+    font-size: 2.5em;
+    transition: 0.2s ease-out;
+    color: var(--yellow);
+}
+
+/* Responsive adjustments while preserving desktop appearance */
+@media screen and (max-width: 1024px) {
+    /* Minor adjustments for medium screens */
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for tablet and mobile while preserving layout */
+    .icon img {
+        /* Keep logos visible but adjust size slightly */
+        max-height: 30px;
+        width: auto;
+    }
+    
+    .intro, .name, .sub, .info {
+        left: 50px; /* Bring text closer to edge on smaller screens */
+    }
+    
+    .name {
+        font-size: 45px;
+    }
+    
+    .sub {
+        font-size: 35px;
+    }
+    
+    .contact {
+        left: 50px;
+        width: 350px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Minimal adjustments for mobile */
+    .icon {
+        /* Preserve the spacing between logos */
+        justify-content: space-around;
+    }
+    
+    .icon img {
+        /* Keep logos visible */
+        margin: 0 5px;
+        max-height: 25px;
+    }
+    
+    .intro, .name, .sub, .info {
+        left: 20px; /* Further reduce left margin */
+    }
+    
+    .name {
+        font-size: 40px;
+    }
+    
+    .sub {
+        font-size: 30px;
+    }
+    
+    .info {
+        max-width: 90%;
+    }
+    
+    .contact {
+        left: 20px;
+        width: 90%;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .projects-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-bg-dark);
+    margin-top: 100px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
