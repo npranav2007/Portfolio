@@ -1,14 +1,14 @@
 // Define the images for each project slideshow
 const projectImages = {
     "project1": [
-      "project1-image1.jpg",
-      "project1-image2.jpg",
-      "project1-image3.jpg"
+      "dpa2.png",
+      "dpa3.png",
+      "dpa4.png"
     ],
     "project2": [
-      "project2-image1.jpg",
-      "project2-image2.jpg",
-      "project2-image3.jpg"
+      "mp2.png",
+      "mp3.png",
+      "mp4.png"
     ],
     "project3": [
       "gymSS.png",
