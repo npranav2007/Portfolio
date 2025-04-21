@@ -8,7 +8,7 @@ const projectImages = {
     "project2": [
       "mp2.png",
       "mp3.png",
-      "mp4.png"
+      "mp4"
     ],
     "project3": [
       "gymSS.png",
